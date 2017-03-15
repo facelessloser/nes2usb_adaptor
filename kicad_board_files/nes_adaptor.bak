@@ -1,0 +1,137 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:My_stuff
+LIBS:nes_adaptor-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "18 feb 2017"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ARDUINO_PRO_MICRO U1
+U 1 1 58454AE8
+P 6350 4600
+F 0 "U1" V 7100 4600 60  0000 C CNN
+F 1 "ARDUINO_PRO_MICRO" H 6350 4600 60  0000 C CNN
+F 2 "~" H 6500 4300 60  0000 C CNN
+F 3 "~" H 6500 4300 60  0000 C CNN
+	1    6350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L NES_PORT U2
+U 1 1 587A66BE
+P 7800 4600
+F 0 "U2" V 8300 4600 60  0000 C CNN
+F 1 "NES_PORT" V 7450 4600 60  0000 C CNN
+F 2 "" H 7850 4600 60  0000 C CNN
+F 3 "" H 7850 4600 60  0000 C CNN
+	1    7800 4600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6100 5200 6100 5450
+Wire Wire Line
+	7500 5450 7500 5050
+Wire Wire Line
+	5600 5450 7500 5450
+Wire Wire Line
+	6100 4000 6100 3700
+Wire Wire Line
+	6100 3700 8000 3700
+Wire Wire Line
+	8000 3700 8000 4000
+Wire Wire Line
+	8000 5050 8000 5400
+Wire Wire Line
+	8000 5400 6400 5400
+Wire Wire Line
+	6400 5400 6400 5200
+Wire Wire Line
+	7850 5050 7850 5350
+Wire Wire Line
+	6200 5200 6200 5350
+Wire Wire Line
+	6200 5350 7850 5350
+Wire Wire Line
+	7700 5050 7700 5300
+Wire Wire Line
+	7700 5300 6300 5300
+Wire Wire Line
+	6300 5300 6300 5200
+$Comp
+L SWITCH_INV SW1
+U 1 1 58A35F71
+P 6100 5800
+F 0 "SW1" H 5900 5950 50  0000 C CNN
+F 1 "SWITCH_INV" H 5950 5650 50  0000 C CNN
+F 2 "~" H 6100 5800 60  0000 C CNN
+F 3 "~" H 6100 5800 60  0000 C CNN
+	1    6100 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5200 6600 5700
+Wire Wire Line
+	5600 5800 5600 5450
+Connection ~ 6100 5450
+Wire Wire Line
+	6500 4000 6500 3550
+Wire Wire Line
+	6250 3400 6250 3700
+Connection ~ 6250 3700
+Wire Wire Line
+	6750 3400 7200 3400
+Wire Wire Line
+	7200 3400 7200 5450
+Connection ~ 7200 5450
+$Comp
+L POT RV1
+U 1 1 58A35F85
+P 6500 3400
+F 0 "RV1" H 6500 3300 50  0000 C CNN
+F 1 "POT" H 6500 3400 50  0000 C CNN
+F 2 "~" H 6500 3400 60  0000 C CNN
+F 3 "~" H 6500 3400 60  0000 C CNN
+	1    6500 3400
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
