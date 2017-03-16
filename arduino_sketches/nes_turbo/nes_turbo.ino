@@ -48,8 +48,9 @@ void loop() {
 
   if (turboSwitch == HIGH)
   {
+    digitalWrite(turboLedPin, HIGH);
 
-   // A
+    // A
     if (state & NES_A)
     {
       if(!a)
@@ -89,6 +90,8 @@ void loop() {
 
   else
   {
+    digitalWrite(turboLedPin, LOW);
+
     // A
     if (state & NES_A)
     {

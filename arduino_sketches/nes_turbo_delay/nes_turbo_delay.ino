@@ -8,6 +8,8 @@ byte state = 0;
 int turboSwitch = 0;
 const int switchPin = 6;
 
+const int turboLedPin =  10;      // the number of the LED pin
+
 /* A button gets marked as true as soon as it is pressed. That way
    we know to not "press" it again */
 boolean a = false; //A      Button
@@ -22,6 +24,7 @@ boolean e = false; //Select Button
 void setup() {
   Joystick.begin();
   pinMode(switchPin, INPUT_PULLUP);
+  pinMode(turboLedPin, OUTPUT);
 }
 
 void loop() {
@@ -34,6 +37,8 @@ void loop() {
 
   if (turboSwitch == HIGH)
   {
+    digitalWrite(turboLedPin, HIGH);
+
     // A
     if (state & NES_A)
     {
@@ -60,6 +65,8 @@ void loop() {
 
   else
   {
+    digitalWrite(turboLedPin, LOW);
+
     // A
     if (state & NES_A)
     {

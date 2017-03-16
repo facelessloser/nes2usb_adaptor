@@ -41,7 +41,7 @@ void loop() {
 
   turboSwitch = digitalRead(switchPin); // Read turbo switch pin
   turboVal = analogRead(potPin); // Read analog pin (pot)
-  mappedTurboVal = map(turboVal, 1, 1023, 40, 200); // Map the pot values
+  mappedTurboVal = map(turboVal, 1, 1023, 200, 40); // Map the pot values
   doubleit = mappedTurboVal*2; // Double the mapped reading from the pot
 
   state = nintendo.buttons();
